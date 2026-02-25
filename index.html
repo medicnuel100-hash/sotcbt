@@ -6,39 +6,24 @@
     <title>41 Days UTME Challenge - Application Form</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* Subtle gray outside */
+            background-color: #f3f4f6; 
         }
-        /* Hide scrollbar for a cleaner look but keep functionality */
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: transparent; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1; 
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8; 
-        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
         
-        /* Smooth fade-in animation */
-        .fade-in {
-            animation: fadeIn 0.6s ease-out forwards;
-        }
+        .fade-in { animation: fadeIn 0.6s ease-out forwards; }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Custom radio/checkbox colors */
         .custom-check:checked {
             background-color: #2563eb;
             border-color: #2563eb;
@@ -78,26 +63,27 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                        <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="John Doe">
+                        <input type="text" name="fullName" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="John Doe">
                     </div>
 
-<div>
-    <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-    <input type="email" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="preferably the one you used for SOT CBT App">
-</div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                        <input type="email" name="email" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="preferably the one you used for SOT CBT App">
+                    </div>
 
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp Name</label>
-                        <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="Name on your profile">
+                        <input type="text" name="whatsappName" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="Name on your profile">
                     </div>
 
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp Number</label>
-                        <input type="tel" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="080XXXXXXXX">
+                        <input type="tel" name="whatsapp" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="080XXXXXXXX">
                     </div>
+                    
                     <div class="md:col-span-2">
                         <label class="block text-sm font-medium text-gray-700 mb-1">Parent or Guardian Number</label>
-                        <input type="tel" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="080XXXXXXXX">
+                        <input type="tel" name="parentPhone" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="080XXXXXXXX">
                     </div>
                 </div>
             </div>
@@ -107,11 +93,11 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Which course are you applying for?</label>
-                        <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="e.g. Medicine and Surgery">
+                        <input type="text" name="course" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="e.g. Medicine and Surgery">
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Which University?</label>
-                        <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="e.g. OAU">
+                        <input type="text" name="university" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="e.g. OAU">
                     </div>
                     
                     <div class="md:col-span-2 p-4 bg-gray-50 rounded-xl border border-gray-200">
@@ -129,17 +115,17 @@
 
                         <div id="score_yes_div" class="hidden mt-3 transition-all">
                             <label class="block text-sm font-medium text-gray-700 mb-1">What was your UTME score?</label>
-                            <input type="number" id="utme_score" class="w-full md:w-1/2 px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g. 250">
+                            <input type="number" id="utme_score" name="utmeScore" class="w-full md:w-1/2 px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g. 250">
                         </div>
                         <div id="score_no_div" class="hidden mt-3 transition-all">
                             <label class="block text-sm font-medium text-gray-700 mb-1">Last score in a UTME standard mock simulation?</label>
-                            <input type="number" id="mock_score" class="w-full md:w-1/2 px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g. 65">
+                            <input type="number" id="mock_score" name="mockScore" class="w-full md:w-1/2 px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g. 65">
                         </div>
                     </div>
 
                     <div class="md:col-span-2">
                         <label class="block text-sm font-medium text-gray-700 mb-1">What is your current level of preparation for 2026 UTME?</label>
-                        <select required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none bg-white">
+                        <select name="prepLevel" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none bg-white">
                             <option value="" disabled selected>Select a level</option>
                             <option value="Just starting">Just starting</option>
                             <option value="Average">Average / Fair</option>
@@ -173,7 +159,7 @@
 
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Why do you want to join the 41 days challenge?</label>
-                        <textarea required rows="3" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none resize-none" placeholder="Briefly tell us..."></textarea>
+                        <textarea name="whyInvolved" required rows="3" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none resize-none" placeholder="Briefly tell us..."></textarea>
                     </div>
 
 
@@ -186,7 +172,7 @@
 
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">How consistent do you think you will be with the daily mock challenge?</label>
-                        <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g. 100% consistent">
+                        <input type="text" name="consistency" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g. 100% consistent">
                     </div>
                     
                     <div>
@@ -199,7 +185,7 @@
 
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">What are your 4 UTME subjects? <span class="text-gray-400 font-normal">(Extra question)</span></label>
-                        <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g. English, Biology, Chemistry, Physics">
+                        <input type="text" name="utmeSubjects" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g. English, Biology, Chemistry, Physics">
                     </div>
 
                 </div>
@@ -236,6 +222,9 @@
             const utmeInput = document.getElementById('utme_score');
             const mockInput = document.getElementById('mock_score');
 
+            // --- IMPORTANT: PASTE YOUR GOOGLE SCRIPT URL BELOW ---
+            const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_SCRIPT_URL_HERE";
+
             // Handle showing/hiding conditional UTME score inputs seamlessly
             Array.from(utmeRadios).forEach(radio => {
                 radio.addEventListener('change', (e) => {
@@ -253,18 +242,26 @@
                 });
             });
 
-            // Smooth submission state simulation
+            // Smooth submission to Google Sheets
             form.addEventListener('submit', (e) => {
-                e.preventDefault(); // Prevent page reload for demo
+                e.preventDefault(); 
                 
                 // Change button state
-                const originalText = submitBtn.innerText;
                 submitBtn.innerText = 'Submitting...';
                 submitBtn.classList.add('opacity-75', 'cursor-wait');
                 submitBtn.disabled = true;
 
-                // Simulate an API call / form submission
-                setTimeout(() => {
+                // Automatically gather all form data based on the 'name' attributes
+                const formData = new FormData(form);
+                const dataObject = Object.fromEntries(formData.entries());
+
+                fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(dataObject)
+                })
+                .then(() => {
                     form.innerHTML = `
                         <div class="flex flex-col items-center justify-center p-12 text-center fade-in">
                             <div class="w-16 h-16 bg-green-100 text-green-500 rounded-full flex items-center justify-center mb-6">
@@ -274,7 +271,13 @@
                             <p class="text-gray-600">Thank you for pledging to the 41 Days Challenge. We will review your application and get back to you shortly.</p>
                         </div>
                     `;
-                }, 1500);
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    submitBtn.innerText = 'Error. Try Again.';
+                    submitBtn.classList.remove('opacity-75', 'cursor-wait');
+                    submitBtn.disabled = false;
+                });
             });
         });
     </script>
